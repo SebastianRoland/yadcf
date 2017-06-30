@@ -1435,10 +1435,10 @@
 				filterActionStr = '';
 			}
 
-			$(filter_selector_string).append("<input onkeydown=\"yadcf.preventDefaultForEnter(event);\" placeholder=\"" + filter_default_label[0] + "\" id=\"" + fromId + "\" class=\"yadcf-filter-range-number yadcf-filter-range " + columnObj.style_class + "\"" + filterActionStr + "></input>");
+			$(filter_selector_string).append("<input onkeydown=\"yadcf.preventDefaultForEnter(event);\" placeholder=\"" + filter_default_label[0] + "\" id=\"" + fromId + "\" name=\"" + fromId + "_name\"" class=\"yadcf-filter-range-number yadcf-filter-range " + columnObj.style_class + "\"" + filterActionStr + "></input>");
 			$(filter_selector_string).append("<span class=\"yadcf-filter-range-number-seperator\" >" +
 				"</span>");
-			$(filter_selector_string).append("<input onkeydown=\"yadcf.preventDefaultForEnter(event);\" placeholder=\"" + filter_default_label[1] + "\" id=\"" + toId + "\" class=\"yadcf-filter-range-number yadcf-filter-range " + columnObj.style_class + "\"" + filterActionStr + "></input>");
+			$(filter_selector_string).append("<input onkeydown=\"yadcf.preventDefaultForEnter(event);\" placeholder=\"" + filter_default_label[1] + "\" id=\"" + toId + "\" name=\"" + toId + "_name\"" class=\"yadcf-filter-range-number yadcf-filter-range " + columnObj.style_class + "\"" + filterActionStr + "></input>");
 
 			if (filter_reset_button_text !== false) {
 				$(filter_selector_string_tmp).append("<button type=\"button\" onmousedown=\"yadcf.stopPropagation(event);\" " +
@@ -1667,10 +1667,10 @@
 				filterActionStr = '';
 			}
 
-			$(filter_selector_string).append("<input onkeydown=\"yadcf.preventDefaultForEnter(event);\" placeholder=\"" + filter_default_label[0] + "\" id=\"" + fromId + "\" class=\"yadcf-filter-range-date yadcf-filter-range " + columnObj.style_class + "\"" + filterActionStr + "></input>");
+			$(filter_selector_string).append("<input onkeydown=\"yadcf.preventDefaultForEnter(event);\" placeholder=\"" + filter_default_label[0] + "\" id=\"" + fromId + "\" name=\"" + fromId + "_name\"" class=\"yadcf-filter-range-date yadcf-filter-range " + columnObj.style_class + "\"" + filterActionStr + "></input>");
 			$(filter_selector_string).append("<span class=\"yadcf-filter-range-date-seperator\" >" +
 				"</span>");
-			$(filter_selector_string).append("<input onkeydown=\"yadcf.preventDefaultForEnter(event);\" placeholder=\"" + filter_default_label[1] + "\" id=\"" + toId + "\" class=\"yadcf-filter-range-date yadcf-filter-range " + + columnObj.style_class + "\"" + filterActionStr + "></input>");
+			$(filter_selector_string).append("<input onkeydown=\"yadcf.preventDefaultForEnter(event);\" placeholder=\"" + filter_default_label[1] + "\" id=\"" + toId + "\" name=\"" + toId + "_name\"" class=\"yadcf-filter-range-date yadcf-filter-range " + + columnObj.style_class + "\"" + filterActionStr + "></input>");
 
 			$fromInput = $("#" + fromId);
 			$toInput = $("#" + toId);
@@ -1764,7 +1764,7 @@
 				filterActionStr = '';
 			}
 
-			$(filter_selector_string).append("<input onkeydown=\"yadcf.preventDefaultForEnter(event);\" placeholder=\"" + filter_default_label + "\" id=\"" + dateId + "\" class=\"yadcf-filter-date\" " + filterActionStr + "></input>");
+			$(filter_selector_string).append("<input onkeydown=\"yadcf.preventDefaultForEnter(event);\" placeholder=\"" + filter_default_label + "\" id=\"" + dateId + "\" name=\"" + dateId + "_name\"" class=\"yadcf-filter-date\" " + filterActionStr + "></input>");
 
 			if (filter_reset_button_text !== false) {
 				$(filter_selector_string_tmp).append('<button type="button" id="' + dateId + '-reset" ' + 'onmousedown="yadcf.stopPropagation(event);" ' +
@@ -2715,7 +2715,7 @@
 								if (columnObj.externally_triggered === true) {
 									filterActionStr = '';
 								}
-								$(filter_selector_string).append("<select id=\"yadcf-filter-" + table_selector_jq_friendly + "-" + column_number + "\" class=\"yadcf-filter " + columnObj.style_class + "\" " +
+								$(filter_selector_string).append("<select id=\"yadcf-filter-" + table_selector_jq_friendly + "-" + column_number + "\" name=\"yadcf-filter-" + table_selector_jq_friendly + "-" + column_number + "_name\" class=\"yadcf-filter " + columnObj.style_class + "\" " +
 									filterActionStr + " onkeydown=\"yadcf.preventDefaultForEnter(event);\" onmousedown=\"yadcf.stopPropagation(event);\" onclick='yadcf.stopPropagation(event);'>" + column_data + "</select>");
 								if (filter_reset_button_text !== false) {
 									$(filter_selector_string).find(".yadcf-filter").after("<button type=\"button\" " +
@@ -2726,7 +2726,7 @@
 								if (columnObj.externally_triggered === true) {
 									filterActionStr = '';
 								}
-								$(filter_selector_string).append("<select id=\"yadcf-filter-" + table_selector_jq_friendly + "-" + column_number + "\" class=\"yadcf-filter " + columnObj.style_class + "\" " +
+								$(filter_selector_string).append("<select id=\"yadcf-filter-" + table_selector_jq_friendly + "-" + column_number + "\" name=\"yadcf-filter-" + table_selector_jq_friendly + "-" + column_number + "_name\" class=\"yadcf-filter " + columnObj.style_class + "\" " +
 									filterActionStr + " onkeydown=\"yadcf.preventDefaultForEnter(event);\" onmousedown=\"yadcf.stopPropagation(event);\" onclick='yadcf.stopPropagation(event);'>" + column_data + "</select>");
 								if (filter_reset_button_text !== false) {
 									$(filter_selector_string).find(".yadcf-filter").after("<button type=\"button\" onmousedown=\"yadcf.stopPropagation(event);\" " +
@@ -2772,7 +2772,7 @@
 								if (columnObj.externally_triggered === true) {
 									filterActionStr = '';
 								}
-								$(filter_selector_string).append("<select multiple data-placeholder=\"" + filter_default_label + "\" id=\"yadcf-filter-" + table_selector_jq_friendly + "-" + column_number + "\" class=\"yadcf-filter " + columnObj.style_class + "\" " +
+								$(filter_selector_string).append("<select multiple data-placeholder=\"" + filter_default_label + "\" id=\"yadcf-filter-" + table_selector_jq_friendly + "-" + column_number + "\" name=\"yadcf-filter-" + table_selector_jq_friendly + "-" + column_number + "_name\" class=\"yadcf-filter " + columnObj.style_class + "\" " +
 									filterActionStr + " onkeydown=\"yadcf.preventDefaultForEnter(event);\" onmousedown=\"yadcf.stopPropagation(event);\" onclick='yadcf.stopPropagation(event);'>" + column_data + "</select>");
 
 								if (filter_reset_button_text !== false) {
@@ -2792,7 +2792,7 @@
 								if (columnObj.externally_triggered === true) {
 									filterActionStr = '';
 								}
-								$(filter_selector_string).append("<select multiple data-placeholder=\"" + filter_default_label + "\" id=\"yadcf-filter-" + table_selector_jq_friendly + "-" + column_number + "\" class=\"yadcf-filter " + columnObj.style_class + "\" " +
+								$(filter_selector_string).append("<select multiple data-placeholder=\"" + filter_default_label + "\" id=\"yadcf-filter-" + table_selector_jq_friendly + "-" + column_number + "\" name=\"yadcf-filter-" + table_selector_jq_friendly + "-" + column_number + "_name\" class=\"yadcf-filter " + columnObj.style_class + "\" " +
 									filterActionStr + " onkeydown=\"yadcf.preventDefaultForEnter(event);\" onmousedown=\"yadcf.stopPropagation(event);\" onclick='yadcf.stopPropagation(event);'>" + column_data + "</select>");
 
 								if (filter_reset_button_text !== false) {
@@ -2839,7 +2839,7 @@
 							if (columnObj.externally_triggered === true) {
 								filterActionStr = '';
 							}
-							$(filter_selector_string).append("<input onkeydown=\"yadcf.preventDefaultForEnter(event);\" id=\"yadcf-filter-" + table_selector_jq_friendly + "-" + column_number + "\" class=\"yadcf-filter\" onmousedown=\"yadcf.stopPropagation(event);\" onclick='yadcf.stopPropagation(event);" +
+							$(filter_selector_string).append("<input onkeydown=\"yadcf.preventDefaultForEnter(event);\" id=\"yadcf-filter-" + table_selector_jq_friendly + "-" + column_number + "\" name=\"yadcf-filter-" + table_selector_jq_friendly + "-" + column_number + "_name\"" class=\"yadcf-filter\" onmousedown=\"yadcf.stopPropagation(event);\" onclick='yadcf.stopPropagation(event);" +
 							"' placeholder='" + filter_default_label + "'" + " filter_match_mode='" + filter_match_mode + "' " + filterActionStr + "></input>");
 							$(document).data("yadcf-filter-" + table_selector_jq_friendly + "-" + column_number, column_data);
 
@@ -2870,7 +2870,7 @@
 								}
 							}
 
-							$(filter_selector_string).append(exclude_str + "<input type=\"text\" onkeydown=\"yadcf.preventDefaultForEnter(event);\" id=\"yadcf-filter-" + table_selector_jq_friendly + "-" + column_number + "\" class=\"yadcf-filter " + columnObj.style_class + "\" onmousedown=\"yadcf.stopPropagation(event);\" onclick='yadcf.stopPropagation(event);" +
+							$(filter_selector_string).append(exclude_str + "<input type=\"text\" onkeydown=\"yadcf.preventDefaultForEnter(event);\" id=\"yadcf-filter-" + table_selector_jq_friendly + "-" + column_number + "\" name=\"yadcf-filter-" + table_selector_jq_friendly + "-" + column_number + "_name\" class=\"yadcf-filter " + columnObj.style_class + "\" onmousedown=\"yadcf.stopPropagation(event);\" onclick='yadcf.stopPropagation(event);" +
 							"' placeholder='" + filter_default_label + "'" + " filter_match_mode='" + filter_match_mode + "' " + filterActionStr + "></input>");
 
 							if (filter_reset_button_text !== false) {
@@ -3804,7 +3804,7 @@
 
 			switch (filterOptions.filter_type) {
 			case 'text':
-				$(filter_selector_string).append("<input type=\"text\" id=\"yadcf-filter-" + table_selector_jq_friendly + '-' + column_number_str + "\" class=\"yadcf-filter\" onmousedown=\"yadcf.stopPropagation(event);\" onclick='yadcf.stopPropagation(event);" +
+				$(filter_selector_string).append("<input type=\"text\" id=\"yadcf-filter-" + table_selector_jq_friendly + '-' + column_number_str + "\" name=\"yadcf-filter-" + table_selector_jq_friendly + '-' + column_number_str + "_name\" class=\"yadcf-filter\" onmousedown=\"yadcf.stopPropagation(event);\" onclick='yadcf.stopPropagation(event);" +
 				"' placeholder='" + filterOptions.filter_default_label + "'" + " onkeyup=\"yadcf.textKeyUpMultiTables('" + tablesSelectors + "',event,'" + column_number_str + "');\"></input>");
 				if (filterOptions.filter_reset_button_text !== false) {
 					$(filter_selector_string).find(".yadcf-filter").after("<button type=\"button\" " + " id=\"yadcf-filter-" + table_selector_jq_friendly + '-' + column_number_str + "-reset\" onmousedown=\"yadcf.stopPropagation(event);\" " +
@@ -3895,7 +3895,7 @@
 					}
 				}
 				if (filterOptions.filter_type === 'select') {
-					$(filter_selector_string).append("<select id=\"yadcf-filter-" + table_selector_jq_friendly + '-' + column_number_str + "\" class=\"yadcf-filter\" " +
+					$(filter_selector_string).append("<select id=\"yadcf-filter-" + table_selector_jq_friendly + '-' + column_number_str + "\" name=\"yadcf-filter-" + table_selector_jq_friendly + '-' + column_number_str + "_name\" class=\"yadcf-filter\" " +
 						"onchange=\"yadcf.doFilterMultiTables('" + tablesSelectors + "',event,'" + column_number_str + "')\" onmousedown=\"yadcf.stopPropagation(event);\" onclick='yadcf.stopPropagation(event);'>" + options_tmp + "</select>");
 					if (settingsDt.aoPreSearchCols[columnForStateSaving].sSearch !== '') {
 						tmpStr = settingsDt.aoPreSearchCols[columnForStateSaving].sSearch;
@@ -3903,7 +3903,7 @@
 						$('#yadcf-filter-' + table_selector_jq_friendly + '-' + column_number_str).val(tmpStr).addClass("inuse");
 					}
 				} else if (filterOptions.filter_type === 'multi_select') {
-					$(filter_selector_string).append("<select multiple data-placeholder=\"" + filterOptions.filter_default_label + "\" id=\"yadcf-filter-" + table_selector_jq_friendly + '-' + column_number_str + "\" class=\"yadcf-filter\" " +
+					$(filter_selector_string).append("<select multiple data-placeholder=\"" + filterOptions.filter_default_label + "\" id=\"yadcf-filter-" + table_selector_jq_friendly + '-' + column_number_str + "\" name=\"yadcf-filter-" + table_selector_jq_friendly + '-' + column_number_str + "_name\" class=\"yadcf-filter\" " +
 						"onchange=\"yadcf.doFilterMultiTablesMultiSelect('" + tablesSelectors + "',event,'" + column_number_str + "')\" onmousedown=\"yadcf.stopPropagation(event);\" onclick='yadcf.stopPropagation(event);'>" + options_tmp + "</select>");
 					if (settingsDt.aoPreSearchCols[columnForStateSaving].sSearch !== '') {
 						tmpStr = settingsDt.aoPreSearchCols[columnForStateSaving].sSearch;
