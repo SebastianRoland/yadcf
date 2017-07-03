@@ -1435,10 +1435,10 @@
 				filterActionStr = '';
 			}
 
-			$(filter_selector_string).append("<input onkeydown=\"yadcf.preventDefaultForEnter(event);\" placeholder=\"" + filter_default_label[0] + "\" id=\"" + fromId + "\" name=\"" + fromId + "_name\"" class=\"yadcf-filter-range-number yadcf-filter-range " + columnObj.style_class + "\"" + filterActionStr + "></input>");
+			$(filter_selector_string).append("<input onkeydown=\"yadcf.preventDefaultForEnter(event);\" placeholder=\"" + filter_default_label[0] + "\" id=\"" + fromId + "\" name=\"" + fromId + "_name\" class=\"yadcf-filter-range-number yadcf-filter-range " + columnObj.style_class + "\"" + filterActionStr + "></input>");
 			$(filter_selector_string).append("<span class=\"yadcf-filter-range-number-seperator\" >" +
 				"</span>");
-			$(filter_selector_string).append("<input onkeydown=\"yadcf.preventDefaultForEnter(event);\" placeholder=\"" + filter_default_label[1] + "\" id=\"" + toId + "\" name=\"" + toId + "_name\"" class=\"yadcf-filter-range-number yadcf-filter-range " + columnObj.style_class + "\"" + filterActionStr + "></input>");
+			$(filter_selector_string).append("<input onkeydown=\"yadcf.preventDefaultForEnter(event);\" placeholder=\"" + filter_default_label[1] + "\" id=\"" + toId + "\" name=\"" + toId + "_name\" class=\"yadcf-filter-range-number yadcf-filter-range " + columnObj.style_class + "\"" + filterActionStr + "></input>");
 
 			if (filter_reset_button_text !== false) {
 				$(filter_selector_string_tmp).append("<button type=\"button\" onmousedown=\"yadcf.stopPropagation(event);\" " +
@@ -1667,10 +1667,10 @@
 				filterActionStr = '';
 			}
 
-			$(filter_selector_string).append("<input onkeydown=\"yadcf.preventDefaultForEnter(event);\" placeholder=\"" + filter_default_label[0] + "\" id=\"" + fromId + "\" name=\"" + fromId + "_name\"" class=\"yadcf-filter-range-date yadcf-filter-range " + columnObj.style_class + "\"" + filterActionStr + "></input>");
+			$(filter_selector_string).append("<input onkeydown=\"yadcf.preventDefaultForEnter(event);\" placeholder=\"" + filter_default_label[0] + "\" id=\"" + fromId + "\" name=\"" + fromId + "_name\" class=\"yadcf-filter-range-date yadcf-filter-range " + columnObj.style_class + "\"" + filterActionStr + "></input>");
 			$(filter_selector_string).append("<span class=\"yadcf-filter-range-date-seperator\" >" +
 				"</span>");
-			$(filter_selector_string).append("<input onkeydown=\"yadcf.preventDefaultForEnter(event);\" placeholder=\"" + filter_default_label[1] + "\" id=\"" + toId + "\" name=\"" + toId + "_name\"" class=\"yadcf-filter-range-date yadcf-filter-range " + + columnObj.style_class + "\"" + filterActionStr + "></input>");
+			$(filter_selector_string).append("<input onkeydown=\"yadcf.preventDefaultForEnter(event);\" placeholder=\"" + filter_default_label[1] + "\" id=\"" + toId + "\" name=\"" + toId + "_name\" class=\"yadcf-filter-range-date yadcf-filter-range " + + columnObj.style_class + "\"" + filterActionStr + "></input>");
 
 			$fromInput = $("#" + fromId);
 			$toInput = $("#" + toId);
@@ -1764,7 +1764,7 @@
 				filterActionStr = '';
 			}
 
-			$(filter_selector_string).append("<input onkeydown=\"yadcf.preventDefaultForEnter(event);\" placeholder=\"" + filter_default_label + "\" id=\"" + dateId + "\" name=\"" + dateId + "_name\"" class=\"yadcf-filter-date\" " + filterActionStr + "></input>");
+			$(filter_selector_string).append("<input onkeydown=\"yadcf.preventDefaultForEnter(event);\" placeholder=\"" + filter_default_label + "\" id=\"" + dateId + "\" name=\"" + dateId + "_name\" class=\"yadcf-filter-date\" " + filterActionStr + "></input>");
 
 			if (filter_reset_button_text !== false) {
 				$(filter_selector_string_tmp).append('<button type="button" id="' + dateId + '-reset" ' + 'onmousedown="yadcf.stopPropagation(event);" ' +
@@ -2839,7 +2839,7 @@
 							if (columnObj.externally_triggered === true) {
 								filterActionStr = '';
 							}
-							$(filter_selector_string).append("<input onkeydown=\"yadcf.preventDefaultForEnter(event);\" id=\"yadcf-filter-" + table_selector_jq_friendly + "-" + column_number + "\" name=\"yadcf-filter-" + table_selector_jq_friendly + "-" + column_number + "_name\"" class=\"yadcf-filter\" onmousedown=\"yadcf.stopPropagation(event);\" onclick='yadcf.stopPropagation(event);" +
+							$(filter_selector_string).append("<input onkeydown=\"yadcf.preventDefaultForEnter(event);\" id=\"yadcf-filter-" + table_selector_jq_friendly + "-" + column_number + "\" name=\"yadcf-filter-" + table_selector_jq_friendly + "-" + column_number + "_name\" class=\"yadcf-filter\" onmousedown=\"yadcf.stopPropagation(event);\" onclick='yadcf.stopPropagation(event);" +
 							"' placeholder='" + filter_default_label + "'" + " filter_match_mode='" + filter_match_mode + "' " + filterActionStr + "></input>");
 							$(document).data("yadcf-filter-" + table_selector_jq_friendly + "-" + column_number, column_data);
 
